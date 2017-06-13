@@ -1,8 +1,8 @@
-function prison() {
-  console.log(prisoner);
-  let prisoner = 'Now I am defined!';
+let regular_joe = 'regular_joe is assigned';
 
-  console.log(prisoner);
+function prison() {
+  console.log(regular_joe);
+  let regular_joe;
 }
 
 prison();
