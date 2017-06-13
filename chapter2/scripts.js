@@ -3,12 +3,10 @@ let proto = {
   probation : 2
 };
 
-let Prisoner = function (name, id) {
-  this.name = name;
-  this.id = id;
-};
+let firstPrisoner = Object.create( proto );
+firstPrisoner.name = 'Joe';
+firstPrisoner.id = '12A';
 
-Prisoner.prototype = proto;
-
-let firstPrisoner = new Prisoner('Joe', '12A');
-let secondPrisoner = new Prisoner('Sam', '2BC');
+let secondPrisoner = Object.create( proto );
+secondPrisoner.name = 'Sam';
+secondPrisoner.id = '2BC';
