@@ -12,14 +12,11 @@ let makePrisoner = function(name, id) {
 };
 
 let firstPrisoner = makePrisoner('Joe', '12A');
+let secondPrisoner = makePrisoner('Sam', '2BC');
 
 console.log(firstPrisoner.sentence);
-console.log(firstPrisoner.__proto__.sentence);
+console.log(secondPrisoner.sentence);
 
-firstPrisoner.sentence = 10;
+proto.sentence = 5;
 console.log(firstPrisoner.sentence);
-console.log(firstPrisoner.__proto__.sentence);
-
-delete firstPrisoner.sentence;
-console.log(firstPrisoner.sentence);
-console.log(firstPrisoner.__proto__.sentence);
+console.log(secondPrisoner.sentence);
