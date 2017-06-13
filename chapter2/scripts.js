@@ -1,16 +1,14 @@
-let regular_joe = 'I am here to save the day!';
-console.log(regular_joe);
+let proto = {
+  sentence  : 4,
+  probation : 2
+};
 
-function supermax () {
-  let regular_joe = 'regular_joe is assigned';
-  console.log(regular_joe);
+let Prisoner = function (name, id) {
+  this.name = name;
+  this.id = id;
+};
 
-  function prison () {
-    let regular_joe;
-    console.log(regular_joe);
-  }
+Prisoner.prototype = proto;
 
-  prison();
-}
-
-supermax();
+let firstPrisoner = new Prisoner('Joe', '12A');
+let secondPrisoner = new Prisoner('Sam', '2BC');
