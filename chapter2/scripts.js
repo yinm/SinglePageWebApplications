@@ -1,8 +1,13 @@
-let regular_joe = 'regular_joe is assigned';
+function myFunction ( arg1, arg2 ) {
+  let
+    local_var = 'foo',
+    a_function = function () {
+      console.log('a function');
+    };
 
-function prison() {
-  console.log(regular_joe);
-  let regular_joe;
+  function inner () {
+    console.log('inner');
+  }
 }
 
-prison();
+myFunction( 1, 2 );
