@@ -1,27 +1,24 @@
 let
-  curryLog,
-  logHello,
-  logStayinAlive,
-  logGoodbye;
+  menu,
+  outer_function,
+  food = 'cake';
 
-curryLog = function(arg_text) {
-  let log_it = function() { console.log(arg_text) };
-  return log_it;
+outer_function = function() {
+  let
+    fruit,
+    inner_function;
+
+  fruit = 'apple';
+
+  inner_function = function() {
+    return {
+      food: food,
+      fruit: fruit
+    }
+  };
+
+  return inner_function;
 };
 
-logHello = curryLog('hello');
-logStayinAlive = curryLog('stayin alive!');
-logGoodbye = curryLog('goodbye');
-
-curryLog('fred');
-logHello();
-logStayinAlive();
-logGoodbye();
-logHello();
-
-delete window.logHello;
-delete window.logStayinAlive;
-
-logGoodbye();
-logStayinAlive();
-
+menu = outer_function();
+console.log(menu());
