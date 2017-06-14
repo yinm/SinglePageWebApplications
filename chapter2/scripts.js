@@ -4,16 +4,15 @@ let prison = (function() {
     jail_term = '20 year term';
 
   return {
-    prisoner: prisoner_name + ' - ' + jail_term,
-    sentence: jail_term
+    prisoner: function() {
+      return prisoner_name + ' - ' + jail_term;
+    },
+    setJailTerm: function(term) {
+      jail_term = term;
+    }
   };
 })();
 
-console.log(prison.prisoner_name);
-console.log(prison.prisoner);
-console.log(prison.sentence);
-
-console.log(prison.jail_term);
-prison.jail_term = 'Sentence commuted';
-console.log(prison.jail_term);
-console.log(prison.prisoner);
+console.log(prison.prisoner());
+prison.setJailTerm('Sentence commuted');
+console.log(prison.prisoner());
