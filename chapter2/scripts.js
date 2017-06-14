@@ -1,7 +1,11 @@
 let prison = (function() {
   let prisoner = 'Josh Powell';
 
-  return { prisoner: prisoner };
+  return {
+    prisoner: function() {
+      return prisoner;
+    }
+  }
 })();
 
-console.log(prison.prisoner);
+console.log(prison.prisoner());
