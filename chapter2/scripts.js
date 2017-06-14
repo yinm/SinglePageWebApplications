@@ -1,24 +1,11 @@
-let
-  menu,
-  outer_function,
-  food = 'cake';
+function sendAjaxRequest() {
+  let scoped_var = 'yay';
 
-outer_function = function() {
-  let
-    fruit,
-    inner_function;
-
-  fruit = 'apple';
-
-  inner_function = function() {
-    return {
-      food: food,
-      fruit: fruit
+  $.ajax({
+    success: function() {
+      console.log(scoped_var);
     }
-  };
+  });
+}
 
-  return inner_function;
-};
-
-menu = outer_function();
-console.log(menu());
+sendAjaxRequest();
