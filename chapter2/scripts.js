@@ -12,3 +12,8 @@ let prison = (function() {
 console.log(prison.prisoner_name);
 console.log(prison.prisoner);
 console.log(prison.sentence);
+
+console.log(prison.jail_term);
+prison.jail_term = 'Sentence commuted';
+console.log(prison.jail_term);
+console.log(prison.prisoner);
