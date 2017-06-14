@@ -1,8 +1,12 @@
 let prison = {
-  names: 'Mike Mikowski and Josh Powell',
+  names: 'josh Powell and MikeMikowski',
   who: function() {
-    return this.names;
+    $.ajax({
+      success: function() {
+        console.log(this.names);
+      }
+    });
   }
 };
 
-console.log(prison.who());
+prison.who();
