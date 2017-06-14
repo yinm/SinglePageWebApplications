@@ -1,11 +1,8 @@
-let makePrison = function(prisoner) {
-  return function() {
-    return prisoner;
+let prison = {
+  names: 'Mike Mikowski and Josh Powell',
+  who: function() {
+    return this.names;
   }
 };
 
-let joshPrison = makePrison('Josh Powell');
-let mikePrison = makePrison('Mike Mikowski');
-
-console.log(joshPrison());
-console.log(mikePrison());
+console.log(prison.who());
