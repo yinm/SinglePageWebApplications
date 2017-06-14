@@ -1,11 +1,14 @@
 let prison = (function() {
-  return 'Mike is in prison';
+  let
+    prisoner_name = 'Mike Mikowski',
+    jail_term = '20 year term';
+
+  return {
+    prisoner: prisoner_name + ' - ' + jail_term,
+    sentence: jail_term
+  };
 })();
 
-function makePrison() {
-  return 'Mike is in prison';
-}
-let prison2 = makePrison();
-
-console.log(prison);
-console.log(prison2);
+console.log(prison.prisoner_name);
+console.log(prison.prisoner);
+console.log(prison.sentence);
