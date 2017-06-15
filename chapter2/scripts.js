@@ -1,7 +1,12 @@
 function prison() {
   console.log(prisoner);
-  let prisoner = 'Now I am defined!';
+  var
+    prisoner,
+    warden,
+    guards;
 
+  console.log(prisoner);
+  prisoner = 'prisoner assigned';
   console.log(prisoner);
 }
 
