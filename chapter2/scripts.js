@@ -1,11 +1,17 @@
-outer(1);
+let regular_joe = 'I am here to save the day!';
 
-function outer(arg) {
-  let local_var = 'foo';
+console.log(regular_joe);
 
-  function inner() {
-    console.log('inner');
+function supermax() {
+  let regular_joe = 'regular_joe is assigned';
+
+  console.log(regular_joe);
+
+  function prison() {
+    let regular_joe;
+    console.log(regular_joe);
   }
+  prison()
 
-  inner();
 }
+supermax();
