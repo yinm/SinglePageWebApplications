@@ -1,12 +1,7 @@
-function prison() {
-  let
-    prisoner,
-    warden,
-    guards;
+let regular_joe = 'Regular Joe';
 
-  console.log(prisoner);
-  prisoner = 'prisoner assigned';
-  console.log(prisoner);
+function prison() {
+  console.log(regular_joe);
 }
 
 prison();
