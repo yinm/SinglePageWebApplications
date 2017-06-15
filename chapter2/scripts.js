@@ -1,17 +1,10 @@
-function myFunction(arg1, arg2) {
-  let
-    local_var = 'foo',
-    a_function = function() {
-      console.log('a function');
-    };
+let regular_joe = 'regular_joe is assigned';
 
-  function inner() {
-    console.log('inner');
-  }
+function prison(regular_joe) {
+  console.log(regular_joe);
+  let regular_joe;
 
-  console.log(local_var);
-  a_function();
-  inner();
+  console.log(regular_joe);
 }
 
-myFunction(1, 2);
+prison('the regular_joe argument');
