@@ -1,5 +1,4 @@
-(function() {
-  let private_variable = 'private';
-})();
-
-console.log(private_variable);
+(function(what_to_eat) {
+  let sentence = 'I am going to eat a ' + what_to_eat;
+  console.log(sentence);
+})('sandwich');
