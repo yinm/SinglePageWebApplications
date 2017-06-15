@@ -1,10 +1,11 @@
-let regular_joe = 'regular_joe is assigned';
+outer(1);
 
-function prison(regular_joe) {
-  console.log(regular_joe);
-  let regular_joe;
+function outer(arg) {
+  let local_var = 'foo';
 
-  console.log(regular_joe);
+  function inner() {
+    console.log('inner');
+  }
+
+  inner();
 }
-
-prison('the regular_joe argument');
