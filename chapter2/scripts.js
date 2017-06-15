@@ -1,11 +1,8 @@
-function sendAjaxRequest() {
-  let scoped_var = 'yay';
+function prison() {
+  console.log(prisoner);
+  let prisoner = 'Now I am defined!';
 
-  $.ajax({
-    success: function() {
-      console.log(scoped_var);
-    }
-  });
+  console.log(prisoner);
 }
 
-sendAjaxRequest();
+prison();
