@@ -1,4 +1,6 @@
-let prison = function() {
-  console.log('prison called');
+let myApplication = function() {
+  let private_variable = 'private';
 };
-prison();
+myApplication();
+
+console.log(private_variable);
