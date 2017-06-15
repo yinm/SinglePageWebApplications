@@ -1,6 +1,5 @@
 function prison() {
-  console.log(prisoner);
-  var
+  let
     prisoner,
     warden,
     guards;
