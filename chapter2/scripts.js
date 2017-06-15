@@ -3,13 +3,16 @@ let proto = {
   probation: 2
 };
 
-let firstPrisoner = Object.create(proto);
-firstPrisoner.name = 'Joe';
-firstPrisoner.id = '12A';
+let makePrisoner = function(name, id) {
+  let prisoner = Object.create(proto);
+  prisoner.name = name;
+  prisoner.id = id;
 
-let secondPrisoner = Object.create(proto);
-secondPrisoner.name = 'Sam';
-secondPrisoner.id = '2BC';
+  return prisoner;
+};
+
+let firstPrisoner = makePrisoner('Joe', '12A');
+let secondPrisoner = makePrisoner('Sam', '2BC');
 
 console.log(firstPrisoner);
 console.log(secondPrisoner);
