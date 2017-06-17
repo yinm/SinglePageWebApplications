@@ -1,11 +1,8 @@
-const makePrison = function(prisoner) {
-  return function() {
-    return prisoner;
+const prison = {
+  names: 'Mike Mikowski and Josh Powell',
+  who: function() {
+    return this.names;
   }
 };
 
-const joshPrison = makePrison('Josh Powell');
-const mikePrison = makePrison('Mike Mikowski');
-
-console.log(joshPrison());
-console.log(mikePrison());
+console.log(prison.who());
