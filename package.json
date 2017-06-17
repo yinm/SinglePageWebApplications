@@ -1,0 +1,24 @@
+{
+  "name": "SPWA",
+  "version": "1.0.0",
+  "description": "[シングルページWebアプリケーション](https://www.oreilly.co.jp/books/9784873116730/)をやっています",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/yinm/SinglePageWebApplications.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/yinm/SinglePageWebApplications/issues"
+  },
+  "homepage": "https://github.com/yinm/SinglePageWebApplications#readme",
+  "devDependencies": {
+    "eslint": "^4.0.0",
+    "eslint-config-airbnb-base": "^11.2.0",
+    "eslint-plugin-import": "^2.3.0"
+  }
+}
