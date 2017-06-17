@@ -1,9 +1,10 @@
 const prison = {
-  names: 'Josh powell and Mike Mikowski',
+  names: 'Mike Mikowski and Josh Powell',
   who: function() {
+    const that = this;
     $.ajax({
       success: function() {
-        console.log(this.names);
+        console.log(that.names);
       }
     });
   }
