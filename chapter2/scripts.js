@@ -1,9 +1,9 @@
 function sendAjaxRequest() {
-  const scoped_var = 'yay';
+  const scopedVar = 'yay';
 
   $.ajax({
     success: function() {
-      console.log(scoped_var);
+      console.log(scopedVar);
     }
   });
 }
