@@ -10,6 +10,7 @@ spa.shell = (function() {
       anchor_schema_map: {
         chat: {opened: true, closed: true}
       },
+      resize_interval: 200,
       main_html: String()
         + '<div class="spa-shell-head">'
           + '<div class="spa-shell-head-logo"></div>'
@@ -25,12 +26,14 @@ spa.shell = (function() {
         + '<div class="spa-shell-modal"></div>'
     },
     stateMap = {
-      anchor_map: {}
+      $container: undefined,
+      anchor_map: {},
+      resize_idto: undefined
     },
     jqueryMap = {},
 
     copyAnchorMap, setJqueryMap,
-    changeAnchorPart, onHashchange,
+    changeAnchorPart, onHashchange, onResize,
     setChatAnchor, initModule;
   //------------- END MODULE SCOPE VARIABLES -----------------
 
@@ -189,15 +192,16 @@ spa.shell = (function() {
   };
   // End Event handler /onHashchange/
 
-  // Begin Event handler /onClickChat/
-  onClickChat = function(event) {
-    changeAnchorPart({
-      chat: (stateMap.is_chat_retracted ? 'open' : 'closed')
-    });
+  // Begin Event handler /onResize/
+  onResize = function() {
+    if (stateMap.resize_idto) { return true; }
 
-    return false;
+    spa.chat.handleResize();
+    stateMap.resize_idto = setTimeout(
+      function() { stateMap.resize_idto = undefined; },
+      configMap.resize_interval
+    );
   };
-  // End Event handler /onClickChat/
   //------------- END EVENT HANDLERS -------------------------
 
   //------------- BEGIN CALLBACKS ----------------------------
@@ -262,6 +266,7 @@ spa.shell = (function() {
     // is considered on-load
     //
     $(window)
+      .bind('resize', onResize)
       .bind('hashchange', onHashchange)
       .trigger('hashchange');
   };
