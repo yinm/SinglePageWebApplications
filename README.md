@@ -18,3 +18,7 @@
   
 * [String.prototype.replace() - JavaScript | MDN](https://developer.mozilla.org/ja/docs/Web/JavaScript/Reference/Global_Objects/String/replace)
   * 置換後の新しい文字列を返す (非破壊的メソッド)
+  
+* [Window.getComputedStyle() - Web APIs | MDN](https://developer.mozilla.org/en-US/docs/Web/API/Window/getComputedStyle)
+
+* [CSSStyleDeclaration.getPropertyValue() - プロパティの値を取得する | DOMリファレンス](https://lab.syncer.jp/Web/API_Interface/Reference/IDL/CSSStyleDeclaration/getPropertyValue/) 
