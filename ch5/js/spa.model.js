@@ -178,13 +178,6 @@ spa.model = (function() {
       // when we add chat, we should leave the chatroom here
 
       is_removed = removePerson(user);
-      return {
-  get_by_cid: get_by_cid,
-        get_db: get_db,
-        get_user: get_user
-        login: login,
-,        logout: logout;
-      }
       stateMap.user = stateMap.anon_user;
 
       $.gevent.publish('spa-logout', [user]);
