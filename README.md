@@ -16,4 +16,5 @@
   * [IE11のX-UA-Compatibleの使い方/動作仕様 - ふろしき.js](http://furoshiki.hatenadiary.jp/entry/2013/11/25/024250) 
   * [今更だけど、X-UA-Compatibleとレンダリングモードについてのまとめ | ichimaruni-design](https://ichimaruni-design.com/2015/01/rendering-mode/) 
   
-  
+* [String.prototype.replace() - JavaScript | MDN](https://developer.mozilla.org/ja/docs/Web/JavaScript/Reference/Global_Objects/String/replace)
+  * 置換後の新しい文字列を返す (非破壊的メソッド)
