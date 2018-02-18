@@ -1,0 +1,23 @@
+<!--[window.getComputedStyle - Web API インターフェイス | MDN](https://developer.mozilla.org/ja/docs/Web/API/Window/getComputedStyle)-->
+<!--[Window.getComputedStyle() - Web APIs | MDN](https://developer.mozilla.org/en-US/docs/Web/API/Window/getComputedStyle)-->
+
+<style>
+  #elem-container {
+    position: absolute;
+    left: 100px;
+    top: 200px;
+    height: 300px;
+  }
+</style>
+
+<div id="elem-container">dummy</div>
+<div id="output"></div>
+
+<script>
+  function getTheStyle() {
+    var elem = document.getElementById('elem-container');
+    var theCSSprop = window.getComputedStyle(elem, null).getPropertyValue('height');
+    document.getElementById('output').innerHTML = theCSSprop;
+  }
+  getTheStyle();
+</script>
