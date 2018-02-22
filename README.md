@@ -22,3 +22,5 @@
 * [Window.getComputedStyle() - Web APIs | MDN](https://developer.mozilla.org/en-US/docs/Web/API/Window/getComputedStyle)
 
 * [CSSStyleDeclaration.getPropertyValue() - プロパティの値を取得する | DOMリファレンス](https://lab.syncer.jp/Web/API_Interface/Reference/IDL/CSSStyleDeclaration/getPropertyValue/) 
+
+* [String.prototype.indexOf() - JavaScript | MDN](https://developer.mozilla.org/ja/docs/Web/JavaScript/Reference/Global_Objects/String/indexOf)
