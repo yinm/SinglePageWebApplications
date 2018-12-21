@@ -1,8 +1,8 @@
-var regular_joe = 'I am global!';
 function prison() {
-  var prisoner = 'I am local!';
+  prisoner_1 = 'I have escaped!';
+  var prisoner_2 = 'I am locked in!'
 }
 
 prison();
-console.log(regular_joe);
-console.log(prisoner);
+console.log(prisoner_1);
+console.log(prisoner_2);
