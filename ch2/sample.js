@@ -7,12 +7,13 @@ var makePrisoner = function(name, id) {
   var prisoner = Object.create(proto);
   prisoner.name = name;
   prisoner.id = id;
-
   return prisoner;
 }
 
 var firstPrisoner = makePrisoner('Joe', '12A');
-var secondPrisoner = makePrisoner('Sam', '2BC');
 
 console.log(firstPrisoner);
-console.log(secondPrisoner);
+console.log(firstPrisoner.__proto__);
+console.log(firstPrisoner.__proto__.__proto__);
+console.log(firstPrisoner.__proto__.__proto__.__proto__);
+console.log(firstPrisoner.__proto__.__proto__.__proto__.__proto__);
