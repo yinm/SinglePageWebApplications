@@ -1,8 +1,9 @@
 var prison = {
-  names: 'Josh Powell and Mike Mikowski',
+  names: 'Mike Mikowski and Josh Powell',
   who: function() {
+    var that = this
     setTimeout(function() {
-      console.log(this.names)
+      console.log(that.names)
     }, 1000)
   }
 }
