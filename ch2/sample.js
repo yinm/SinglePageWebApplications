@@ -1,10 +1,10 @@
-var eatFunction = function (what_to_eat) {
-  var sentence = 'I am going to eat a ' + what_to_eat
-  console.log(sentence)
-}
-eatFunction('sandwich');
+var prison = (function() {
+  return 'Mike is in prison'
+})()
+console.log(prison)
 
-(function(what_to_eat) {
-  var sentence = 'I am going to eat a ' + what_to_eat
-  console.log(sentence)
-})('sandwich')
+function makePrison() {
+  return 'Mike is in prison'
+}
+var prison = makePrison()
+console.log(prison)
