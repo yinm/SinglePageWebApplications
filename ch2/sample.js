@@ -1,4 +1,4 @@
-var prison = (function() {
+var prison = (function () {
   var prisoner_name = 'Mike Mikowski',
       jail_term = '20 year term';
 
@@ -8,6 +8,10 @@ var prison = (function() {
   }
 })()
 
-console.log(prison.prisoner_name)
+console.log(prison.jail_term)
+prison.jail_term = 'Sentence commuted'
+
+console.log(prison.jail_term)
+
 console.log(prison.prisoner)
 console.log(prison.sentence)
