@@ -1,11 +1,11 @@
-var prison = (function () {
-  var prisoner = 'Josh Powell'
-
-  return {
-    prisoner: function() {
-      return prisoner
-    }
+var makePrison = function (prisoner) {
+  return function() {
+    return prisoner
   }
-})()
+}
 
-console.log(prison.prisoner())
+var joshPrison = makePrison('Josh Powell')
+var mikePrison = makePrison('Mike Mikowski')
+
+console.log(joshPrison())
+console.log(mikePrison())
