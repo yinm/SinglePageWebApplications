@@ -1,3 +1,4 @@
-console.log(global_var);
-var global_var = 'Global Variable';
-console.log(global_var)
+(function(what_to_eat) {
+  var sentence = 'I am going to eat a ' + what_to_eat;
+  console.log(sentence);
+})('sandwich')
