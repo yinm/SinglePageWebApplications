@@ -1,17 +1,7 @@
-var prison = (function () {
-  var prisoner_name = 'Mike Mikowski',
-      jail_term = '20 year term'
+var prison = (function() {
+  var prisoner = 'Josh Powell'
 
-  return {
-    prisoner: function () {
-      return prisoner_name + ' - ' + jail_term
-    },
-    setJailTerm: function (term) {
-      jail_term = term
-    }
-  }
+  return { prisoner: prisoner }
 })()
 
-console.log(prison.prisoner())
-prison.setJailTerm('Sentence commuted')
-console.log(prison.prisoner())
+console.log(prison.prisoner)
