@@ -1,5 +1,12 @@
-(function () {
-  var private_variable = 'private'
+// Error!
+// console.log(local_var)
+
+(function() {
+  console.log(local_var)
+
+  var local_var = 'local Variable'
+
+  console.log(local_var)
 })()
 
-console.log(private_variable)
+console.log(local_var)
