@@ -1,24 +1,18 @@
-var curryLog, logHello, logStayinAlive, logGoodbye
+var menu, outer_function,
+    food = 'cake'
 
-curryLog = function(arg_text) {
-  var log_it = function() { console.log(arg_text) }
-  return log_it
+outer_function = function() {
+  var fruit, inner_function
+
+  fruit = 'apple'
+
+  inner_function = function () {
+    return { food: food, fruit: fruit }
+  }
+
+  return inner_function
 }
 
-logHello = curryLog('hello')
-logStayinAlive = curryLog('stayin alive!')
-logGoodbye = curryLog('goodbye')
+menu = outer_function()
 
-curryLog('fred')
-
-logHello()
-logStayinAlive()
-logGoodbye()
-logHello()
-
-delete window.logHello
-delete window.logStayinAlive
-
-logGoodbye()
-logHello()
-logStayinAlive()
+console.log(menu())
