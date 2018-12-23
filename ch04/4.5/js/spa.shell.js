@@ -18,6 +18,7 @@ spa.shell = (function () {
       anchor_schema_map : {
         chat  : { opened : true, closed : true }
       },
+      resize_interval: 200,
       main_html : String()
         + '<div class="spa-shell-head">'
           + '<div class="spa-shell-head-logo"></div>'
@@ -32,11 +33,15 @@ spa.shell = (function () {
         + '<div class="spa-shell-modal"></div>'
     },
 
-    stateMap  = { anchor_map : {} },
+    stateMap  = {
+      $container: undefined,
+      anchor_map : {},
+      resize_idto: undefined
+    },
     jqueryMap = {},
 
     copyAnchorMap,    setJqueryMap,
-    changeAnchorPart, onHashchange,
+    changeAnchorPart, onHashchange, onResize,
     setChatAnchor,    initModule;
   //----------------- END MODULE SCOPE VARIABLES ---------------
 
@@ -188,6 +193,18 @@ spa.shell = (function () {
     return false;
   };
   // End Event handler /onHashchange/
+
+  onResize = function () {
+    if (stateMap.resize_idto) { return true }
+
+    spa.chat.handleResize()
+    stateMap.resize_idto = setTimeout(
+      function() { stateMap.resize_idto = undefined },
+      configMap.resize_interval
+    )
+
+    return true
+  }
   //-------------------- END EVENT HANDLERS --------------------
 
   //---------------------- BEGIN CALLBACKS ---------------------
@@ -217,14 +234,14 @@ spa.shell = (function () {
   //   Directs the Shell to offer its capability to the user
   // Arguments :
   //   * $container (example: $('#app_div_id')).
-  //     A jQuery collection that should represent 
+  //     A jQuery collection that should represent
   //     a single DOM container
   // Action    :
   //   Populates $container with the shell of the UI
   //   and then configures and initializes feature modules.
   //   The Shell is also responsible for browser-wide issues
   //   such as URI anchor and cookie management.
-  // Returns   : none 
+  // Returns   : none
   // Throws    : none
   //
   initModule = function ( $container ) {
@@ -253,6 +270,7 @@ spa.shell = (function () {
     // is considered on-load
     //
     $(window)
+      .bind('resize', onResize)
       .bind( 'hashchange', onHashchange )
       .trigger( 'hashchange' );
 
