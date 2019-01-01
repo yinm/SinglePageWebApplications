@@ -41,6 +41,20 @@ app.get('/user/read/:id([0-9]+)', function (request, response) {
   })
 })
 
+app.post('/user/update/:id([0-9]+)', function(request, response) {
+  response.contentType('json')
+  response.send({
+    title: 'user with id ' + request.params.id + ' updated'
+  })
+})
+
+app.get('/user/delete/:id([0-9]+)', function(request, response) {
+  response.contentType('json')
+  response.send({
+    title: 'user with id ' + request.params.id + ' deleted'
+  })
+})
+
 server.listen(3000)
 console.log(
   'Express server listening on port %d in %s mode',
