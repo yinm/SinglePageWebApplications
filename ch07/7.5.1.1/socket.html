@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+  <script src="/socket.io/socket.io.js"></script>
+  <script>
+    io.connect().on('message', function (count) {
+      $('body').html(count)
+    })
+  </script>
+  <meta charset="UTF-8">
+  <title>Title</title>
+</head>
+<body>
+  Loading...
+</body>
+</html>
