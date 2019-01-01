@@ -4,10 +4,13 @@ var
   MongoClient = require('mongodb').MongoClient,
 
   url = 'mongodb://localhost:27017',
-  dbName = 'spa'
+  dbName = 'spa',
+  db
 
 MongoClient.connect(url, function(err, client) {
   console.log('** Connected to MongoDB **')
+
+  db = client.db(dbName)
 })
 
 configRoutes = function (app, server) {
@@ -21,7 +24,10 @@ configRoutes = function (app, server) {
   })
 
   app.get('/:obj_type/list', function (request, response) {
-    response.send({ title: request.params.obj_type + ' list' })
+    var collection = db.collection(request.params.obj_type)
+    collection.find({}).toArray(function(err, docs) {
+      response.send(docs)
+    })
   })
 
   app.post('/:obj_type/create', function (request, response) {
